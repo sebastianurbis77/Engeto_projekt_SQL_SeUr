@@ -18,5 +18,5 @@ SELECT
 FROM czechia_price cp
 GROUP BY YEAR (date_from);
 
-	-- z dosupných informací jsme zjistili, že společné porovnatelné období jsou roky 2006-2018
+	-- z dostupných informací jsme zjistili, že společné porovnatelné období jsou roky 2006-2018
 
