@@ -1,6 +1,22 @@
-ELECT *
-FROM healthcare_provider hp 
-WHERE place_id IS NULL
-	OR provider_id IS NULL
-	OR name IS NULL
-	OR street_name IS NULL;
+/*	SQL Projekt 
+ * 
+ *	spojení primárních tabulek
+ *
+ */
+
+ -- nejdřív musíme zjisit jaké je společné porovantelné období
+
+
+SELECT 
+	payroll_year 
+FROM czechia_payroll cp
+GROUP BY payroll_year;
+
+
+SELECT 
+	YEAR (date_from) 
+FROM czechia_price cp
+GROUP BY YEAR (date_from);
+
+	-- z dosupných informací jsme zjistili, že společné porovnatelné období jsou roky 2006-2018
+
