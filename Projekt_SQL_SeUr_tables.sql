@@ -26,23 +26,24 @@ GROUP BY YEAR (date_from);
 
 CREATE OR REPLACE VIEW t_sebastian_urbis_project_SQL_primary_final AS
 SELECT
-	cpc.name AS food_item,
-	cp.value AS price,
-	cpc.price_value AS rounding_value,
-	cpc.price_unit AS rounding_unit,
-	cp.date_from,
-	cp.date_to,
-	cp2.payroll_year,
-	cpib.name AS industry_cat,
-	cp2.value AS wage_average
-FROM czechia_price cp
-JOIN czechia_price_category cpc 
-	ON cp.category_code = cpc.code
-JOIN czechia_payroll cp2 
-	ON YEAR(cp.date_from) = cp2.payroll_year
-	AND cp2.value_type_code = 5958
-JOIN czechia_payroll_industry_branch cpib 
-	ON cp2.industry_branch_code = cpib.code;
+    cpc.name AS food_category, 
+    cp.value AS price,
+    cpc.price_value AS rounding_value,
+    cpc.price_unit AS rounding_unit,
+    DATE_FORMAT(cp.date_from, '%d.%m.%Y') AS price_measured_from,
+    DATE_FORMAT(cp.date_to, '%d.%m.%Y') AS price_measured_to,
+    cpib.name AS industry,
+    cpay.value AS average_wages,
+    cpay.payroll_year
+FROM czechia_price AS cp
+JOIN czechia_payroll AS cpay
+    ON YEAR(cp.date_from) = cpay.payroll_year AND
+    cpay.value_type_code = 5958 AND
+    cp.region_code IS NULL
+JOIN czechia_price_category cpc
+    ON cp.category_code = cpc.code
+JOIN czechia_payroll_industry_branch cpib
+    ON cpay.industry_branch_code = cpib.code;
 
  -- pojítko pro naše tabulky byl společný rok, díky tomu jsme si mohli vypsat všechna potřebná data pro anlýzu výzkumných otázek
 
