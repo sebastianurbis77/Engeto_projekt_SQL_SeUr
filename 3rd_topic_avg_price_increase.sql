@@ -83,7 +83,7 @@ FROM min_year_inc myi
 ORDER BY min_value;
 
 /*
- *  Z vyhodnocených dat jsme zjistili, že nejpomalejší procentuální nárust má Cukr krystalový, který během sledováaného období dokonce zlevňuje. Zlevňuje v průměru přibližně o 1,9% ročně.
+ *  Z vyhodnocených dat jsme zjistili, že nejpomalejší procentuální nárust má Cukr krystalový, který během sledovaného období dokonce zlevňuje. Zlevňuje v průměru přibližně o 1,9% ročně.
  *  Hned za cukrem zlevňují také Rajská jablka červená kulatá příbližně v průměru o 0,74% ročně.
  *  Nejmenší meziroční pokles cen zaznamenali v roce 2007 pro Rajská jablka červená kulatá o 30,28%. Nejmenší meziroční nárůst jsem zaznamenali taktéž v roce 2007 pro Pivo výčepní, světlé, lahvové o 0,56%.
  */
