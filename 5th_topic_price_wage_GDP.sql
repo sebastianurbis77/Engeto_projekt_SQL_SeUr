@@ -44,7 +44,10 @@ SELECT *
 FROM price_wage_gdp pwg
 ;
 
--- výrazný růst HDP jsme zaznamenali v letech 2007, 2015 a 2017
--- v roce 2007 vzrostlo HDP o 5,28% byl růst ceny potravin 6,74% a mezd 7,59% v následujícím roce pak ceny potravin 6,19% a mzdy 10,47%
--- v roce 2015 vzrostlo HDP o 5,11% jsme naopak zaznamenali pokles ceny potravin -0,54% a růst mezd 1,53%, a v následujícím ceny potravin klesly o -1,21% a mzdy vzrostly o 7,33%
--- na základě zjištěných dat nelze s jistotou potvrdit přímy vliv růstu HDP na ceny potravin a výšku mezd
+
+/*
+ *	výrazný růst HDP jsme zaznamenali v letech 2007, 2015 a 2017
+ *	v roce 2007 vzrostlo HDP o 5,28% byl růst ceny potravin 6,74% a mezd 7,59% v následujícím roce pak ceny potravin 6,19% a mzdy 10,47%
+ *	v roce 2015 vzrostlo HDP o 5,11% jsme naopak zaznamenali pokles ceny potravin -0,54% a růst mezd 1,53%, a v následujícím ceny potravin klesly o -1,21% a mzdy vzrostly o 7,33%
+ * 	na základě zjištěných dat nelze s jistotou potvrdit přímy vliv růstu HDP na ceny potravin a výšku mezd
+ * /
