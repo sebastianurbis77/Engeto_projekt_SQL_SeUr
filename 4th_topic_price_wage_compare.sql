@@ -67,4 +67,6 @@ JOIN avg_wage_year_increase awyi
 	ON yapi.f_year_before = awyi.year_before 
 ;
 
--- Z porovnání růstu průměrných cen a mezd jsme zjistili, že v žádném roce nebyl růst ceny potravin vyšší než růst mezd. Nejětší rozdíl jsme zaznamenali v roce 2013 a to 7,15%.
+/*
+ *	Z porovnání růstu průměrných cen a mezd jsme zjistili, že v žádném roce nebyl růst ceny potravin vyšší než růst mezd. Nejětší rozdíl jsme zaznamenali v roce 2013 a to 7,15%.
+ */
